@@ -1,0 +1,23 @@
+max_size = 5
+stack = []
+    
+def push(data):
+    if len(stack) == max_size:
+        print("Stack penuh!")
+    else:
+        stack.append(data)
+        print("Push:", data)
+
+def pop():
+    if not stack:
+        print("Stack kosong!")
+    else:
+        print("Pop:", stack.pop())
+
+# Contoh penggunaan
+push(10)
+push(20)
+push(30)
+pop()
+push(40)
+print("Isi stack:", stack)
