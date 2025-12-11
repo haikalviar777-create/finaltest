@@ -1,0 +1,5 @@
+# Tipe Data Dasar Python
+nama = "Haikal"       # String
+umur = 20             # Integer
+ipk = 3.75            # Float
+aktif = True          # Boolean
