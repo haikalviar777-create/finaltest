@@ -1,0 +1,8 @@
+mahasiswa = {
+    "nama": "Haikal viar",
+    "nim": "D0425306",
+    "jurusan": "sistem informasi",
+    "nilai": 100
+}
+
+print("Dictionary:", mahasiswa)
