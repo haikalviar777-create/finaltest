@@ -1,0 +1,49 @@
+max_size = 10
+arr = [None] * max_size
+
+top1 = -1       # Stack 1 dari kiri
+top2 = max_size # Stack 2 dari kanan
+
+def push1(data):
+    global top1, top2
+    if top1 + 1 == top2:
+        print("Stack penuh (stack1 tabrakan dengan stack2)!")
+    else:
+        top1 += 1
+        arr[top1] = data
+        print("Push Stack1:", data)
+
+def push2(data):
+    global top1, top2
+    if top2 - 1 == top1:
+        print("Stack penuh (stack2 tabrakan dengan stack1)!")
+    else:
+        top2 -= 1
+        arr[top2] = data
+        print("Push Stack2:", data)
+
+def pop1():
+    global top1
+    if top1 == -1:
+        print("Stack1 kosong!")
+    else:
+        print("Pop Stack1:", arr[top1])
+        top1 -= 1
+
+def pop2():
+    global top2
+    if top2 == max_size:
+        print("Stack2 kosong!")
+    else:
+        print("Pop Stack2:", arr[top2])
+        top2 += 1
+
+# Contoh penggunaan
+push1(10)
+push1(20)
+push2(99)
+push2(88)
+pop1()
+pop2()
+
+print("Isi array:", arr)
