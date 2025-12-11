@@ -1,0 +1,14 @@
+# Array awal
+buah = ["apel", "jeruk", "mangga"]
+
+# Menambah elemen
+buah.append("pisang")
+
+# Mengubah elemen
+buah[1] = "melon"
+
+# Menghapus elemen
+buah.remove("apel")
+
+# Menampilkan hasil akhir
+print("Array buah:", buah)
