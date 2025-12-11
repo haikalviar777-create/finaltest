@@ -1,0 +1,22 @@
+def interpolation_search(arr, key):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high and key >= arr[low] and key <= arr[high]:
+
+        # Menghitung posisi mid berdasarkan estimasi
+        mid = low + int((key - arr[low]) * (high - low) 
+                         / (arr[high] - arr[low]))
+
+        if arr[mid] == key:
+            return mid
+        elif arr[mid] < key:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return -1
+
+# Contoh penggunaan
+data = [10, 20, 30, 40, 50]
+print(interpolation_search(data, 30))   # Output: 2
