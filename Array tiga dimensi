@@ -1,0 +1,9 @@
+array3D = [[[i + j + k for k in range(2)] 
+            for j in range(2)] 
+            for i in range(2)]
+
+print("Array 3D otomatis:")
+for dim1 in array3D:
+    for dim2 in dim1:
+        print(dim2)
+    print("---")
